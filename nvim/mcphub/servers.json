@@ -1,0 +1,24 @@
+{
+  "mcpServers": {
+    "fetch": {
+      "args": [
+        "mcp-server-fetch"
+      ],
+      "command": "uvx",
+      "disabled": true
+    },
+    "github": {
+      "headers": {
+        "Authorization": "Bearer ${GITHUB_PERSONAL_ACCESS_TOKEN}"
+      },
+      "url": "https://api.githubcopilot.com/mcp/"
+    },
+    "odoo-ai-quest-mcp": {
+      "disabled": false,
+      "headers": {
+        "Authorization": "Bearer 343e1b80fef5bdfbf131d411244dc767722c1dce"
+      },
+      "url": "http://mcp.azzar.org/api/mcp"
+    }
+  }
+}
