@@ -32,3 +32,5 @@ sudo chown -R root:odoo /usr/local/lib/node_modules_global
 # Set the permissions to allow the group to write
 sudo chmod -R 775 /usr/local/lib/node_modules_global
 sudo npm config set prefix /usr/local/lib/node_modules_global --global
+sudo wget -O /etc/profile.d/set_global_node_dir.sh https://github.com/vertelab/vertel-neovim-config/raw/refs/heads/main/set_global_node_dir.sh
+
