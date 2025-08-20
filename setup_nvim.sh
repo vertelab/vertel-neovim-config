@@ -31,3 +31,4 @@ sudo usermod -a -G odoo $USER
 sudo chown -R root:odoo /usr/local/lib/node_modules_global
 # Set the permissions to allow the group to write
 sudo chmod -R 775 /usr/local/lib/node_modules_global
+sudo npm config set prefix /usr/local/lib/node_modules_global --global
