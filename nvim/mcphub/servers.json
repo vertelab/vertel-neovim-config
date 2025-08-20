@@ -14,7 +14,7 @@
       "url": "https://api.githubcopilot.com/mcp/"
     },
     "odoo-ai-quest-mcp": {
-      "disabled": false,
+      "disabled": true,
       "headers": {
         "Authorization": "Bearer 343e1b80fef5bdfbf131d411244dc767722c1dce"
       },

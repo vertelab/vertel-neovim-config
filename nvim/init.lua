@@ -1,5 +1,4 @@
 require("config.lazy")
-
 -- Set the number of spaces a tab character will use.
 vim.opt.tabstop = 4
 
@@ -15,4 +14,7 @@ vim.opt.relativenumber = true
 vim.opt.smartindent = true
 
 vim.opt.clipboard = "unnamedplus"
+
+vim.keymap.set("n", "<leader>e", ":Lexplore<CR>", { noremap = true, silent = true })
+
 
