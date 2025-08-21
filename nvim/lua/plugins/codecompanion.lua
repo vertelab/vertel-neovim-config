@@ -1,4 +1,5 @@
-return { 
+return {
+
     {
         "olimorris/codecompanion.nvim",
         opts = {},
@@ -11,10 +12,10 @@ return {
             require("codecompanion").setup({
                 strategies = {
                     chat = {
-                        adapter = "mistral",
+                        adapter = "ollama",
                     },
                     inline = {
-                        adapter = "mistral",
+                        adapter = "ollama",
                     },
                 },
 
@@ -22,27 +23,23 @@ return {
                     mistral = function()
                         return require("codecompanion.adapters").extend("mistral", {
                             env = {
-                                api_key = "api_key"
+                                api_key = os.getenv("MISTRAL_API_KEY")
                             },
                         })
                     end,
-                },
 
-                adapters = {
                     openai = function()
                         return require("codecompanion.adapters").extend("openai", {
                             env = {
-                                api_key = "api_key"
+                                api_key = os.getenv("OPENAI_API_KEY")
                             },
                         })
                     end,
-                },
 
-                adapters = {
                     ollama = function()
-                        return require("codecompanion.adapters").extend("mistral", {
+                        return require("codecompanion.adapters").extend("ollama", {
                             env = {
-                                api_key = "api_key"
+                                url = "http://192.168.1.215:11434"
                             },
                         })
                     end,
