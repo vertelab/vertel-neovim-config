@@ -26,6 +26,7 @@ sudo mkdir $NVIM
 sudo chown root:odoo $NVIM
 sudo chmod g+rwx $NVIM
 mkdir $NVIM/mcphub
+mkdir $NVIM/lua
 mkdir $NVIM/lua/config
 mkdir $NVIM/lua/plugins
 mkdir $NVIM/lua/themes
