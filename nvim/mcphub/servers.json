@@ -16,7 +16,7 @@
     "odoo-ai-quest-mcp": {
       "disabled": true,
       "headers": {
-        "Authorization": "Bearer 343e1b80fef5bdfbf131d411244dc767722c1dce"
+        "Authorization": "Bearer ${ODOO_USER_ACCESS_TOKEN}"
       },
       "url": "http://mcp.azzar.org/api/mcp"
     }
