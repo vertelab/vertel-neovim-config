@@ -20,7 +20,6 @@ sudo DEBIAN_FRONTEND=noninteractive apt install -y lua5.1 liblua5.1-dev unzip np
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 source $HOME/.cargo/env
 cargo install tree-sitter-cli
-export PATH="$HOME/.cargo/bin:$PATH"
 
 # Seting up and installing luarocks
 wget -O /tmp/luarocks.tar.gz https://luarocks.org/releases/luarocks-3.12.2.tar.gz
@@ -68,5 +67,5 @@ sudo chown -R root:odoo /usr/local/lib/node_modules_global
 # Set the permissions to allow the group to write
 sudo chmod -R 775 /usr/local/lib/node_modules_global
 sudo npm config set prefix /usr/local/lib/node_modules_global --global
-sudo wget -O /etc/profile.d/set_global_node_dir.sh https://github.com/vertelab/vertel-neovim-config/raw/refs/heads/main/set_global_node_dir.sh
+sudo wget -O /etc/profile.d/set_global_node_dir.sh https://github.com/vertelab/vertel-neovim-config/raw/refs/heads/main/set_nvim_env_variables.sh
 
