@@ -7,7 +7,7 @@ NVIM=/etc/xdg/nvim
 sudo snap install nvim --classic
 
 # Fix latest version of nodejs for mcphub
-sudo apt-get remove -y nodejs libnode-dev nodejs-doc
+sudo DEBIAN_FRONTEND=noninteractive apt-get remove -y nodejs libnode-dev nodejs-doc
 sudo apt update
 curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
 sudo DEBIAN_FRONTEND=noninteractive apt-get install -y nodejs
