@@ -8,7 +8,7 @@ sudo snap install nvim --classic
 
 # Installing luarocks dependencys and more
 sudo apt-get update
-sudo DEBIAN_FRONTEND=noninteractive apt-get install -y lua5.1 liblua5.1-dev unzip npm ripgrep tree-sitter-cli mercurial
+sudo DEBIAN_FRONTEND=noninteractive apt-get install -y lua5.1 liblua5.1-dev unzip npm ripgrep mercurial build-essential
 
 # Fix latest version of nodejs for mcphub
 sudo apt-get remove -y nodejs libnode-dev nodejs-doc
@@ -16,8 +16,11 @@ sudo apt-get update
 curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
 sudo DEBIAN_FRONTEND=noninteractive apt-get install -y nodejs
 
-# Installing python dependencys
-sudo pip install mcp-hub
+# setup tree-sitter
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+source $HOME/.cargo/env
+cargo install tree-sitter-cli
+export PATH="$HOME/.cargo/bin:$PATH"
 
 # Seting up and installing luarocks
 wget -O /tmp/luarocks.tar.gz https://luarocks.org/releases/luarocks-3.12.2.tar.gz
