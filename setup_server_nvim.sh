@@ -12,6 +12,11 @@ sudo apt update
 curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
 sudo DEBIAN_FRONTEND=noninteractive apt-get install -y nodejs
 
+# Cleanup apt packages
+sudo apt --fix-broken install -y
+sudo apt-get install -f -y
+sudo apt autoremove -y
+
 # Installing luarocks dependencys and more
 sudo apt update
 sudo DEBIAN_FRONTEND=noninteractive apt install -y lua5.1 liblua5.1-dev liblua5.1-0-dev unzip npm ripgrep mercurial build-essential
