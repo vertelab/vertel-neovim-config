@@ -8,7 +8,13 @@ sudo snap install nvim --classic
 
 # installing luarocks dependencys and more
 sudo apt-get update
-sudo apt-get install lua5.1 liblua5.1-dev unzip npm ripgrep tree-sitter mercurial
+sudo apt-get install -y lua5.1 liblua5.1-dev unzip npm ripgrep tree-sitter-cli mercurial
+
+# Fix latest version of nodejs for mcphub
+sudo apt-get remove nodejs libnode-dev nodejs-doc
+sudo apt-get update
+curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+sudo apt-get install -y nodejs
 
 # Installing python dependencys
 sudo pip install mcp-hub
