@@ -15,6 +15,7 @@ tar zxpf luarocks.tar.gz
 cd /tmp/luarocks/
 ./configure && make && sudo make install
 sudo luarocks install luasocket
+sudo rm luarocks* -r
 cd $USER_LOCATION
 
 sudo groupadd odoo
