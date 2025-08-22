@@ -12,7 +12,7 @@ sudo apt install lua5.1  liblua5.1-dev unzip
 # seting up and installing luarocks
 wget -O /tmp/luarocks.tar.gz https://luarocks.org/releases/luarocks-3.12.2.tar.gz
 tar zxpf luarocks.tar.gz
-cd /tmp/luarocks/
+cd /tmp/luarocks-3.12.2/
 ./configure && make && sudo make install
 sudo luarocks install luasocket
 sudo rm luarocks* -r
