@@ -14,7 +14,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get install -y nodejs
 
 # Installing luarocks dependencys and more
 sudo apt update
-sudo DEBIAN_FRONTEND=noninteractive apt install -y lua5.1 liblua5.1-dev unzip npm ripgrep mercurial build-essential
+sudo DEBIAN_FRONTEND=noninteractive apt install -y lua5.1 liblua5.1-dev liblua5.1-0-dev unzip npm ripgrep mercurial build-essential
 
 # setup tree-sitter
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
