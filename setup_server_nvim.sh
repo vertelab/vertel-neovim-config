@@ -33,6 +33,7 @@ mkdir $NVIM/lua/themes
 
 # get nvim files
 wget -O $NVIM/init.lua https://github.com/vertelab/vertel-neovim-config/raw/refs/heads/main/nvim/init.lua
+wget -O $NVIM/sysinit.vim https://github.com/vertelab/vertel-neovim-config/raw/refs/heads/main/nvim/sysinit.vim
 wget -O $NVIM/mcphub/servers.json https://github.com/vertelab/vertel-neovim-config/raw/refs/heads/main/nvim/mcphub/servers.json
 wget -O $NVIM/lua/config/lazy.lua https://github.com/vertelab/vertel-neovim-config/raw/refs/heads/main/nvim/lua/config/lazy.lua
 wget -O $NVIM/lua/plugins/codecompanion.lua https://github.com/vertelab/vertel-neovim-config/raw/refs/heads/main/nvim/lua/plugins/codecompanion.lua
