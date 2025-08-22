@@ -6,8 +6,8 @@ NVIM=/etc/xdg/nvim
 # snap installing neovim 
 sudo snap install nvim --classic
 
-# installing luarocks dependencys
-sudo apt install lua5.1  liblua5.1-dev unzip
+# installing luarocks dependencys and more
+sudo apt install lua5.1 liblua5.1-dev unzip npm
 
 # seting up and installing luarocks
 wget -O /tmp/luarocks.tar.gz https://luarocks.org/releases/luarocks-3.12.2.tar.gz
@@ -47,8 +47,6 @@ wget -O $NVIM/lua/plugins/mcphub.lua https://github.com/vertelab/vertel-neovim-c
 wget -O $NVIM/lua/plugins/telescope.lua https://github.com/vertelab/vertel-neovim-config/raw/refs/heads/main/nvim/lua/plugins/telescope.lua
 wget -O $NVIM/lua/plugins/which-key.lua https://github.com/vertelab/vertel-neovim-config/raw/refs/heads/main/nvim/lua/plugins/which-key.lua
 wget -O $NVIM/lua/themes/init.lua https://github.com/vertelab/vertel-neovim-config/raw/refs/heads/main/nvim/lua/themes/init.lua
-
-
 
 # Fix a global node install directory to make mcp happy
 sudo mkdir -p /usr/local/lib/node_modules_global
