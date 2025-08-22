@@ -54,5 +54,5 @@ sudo mkdir -p /usr/local/lib/node_modules_global
 # Change the ownership of the directory to the new group
 sudo chown -R $USER:$USER /usr/local/lib/node_modules_global
 sudo npm config set prefix /usr/local/lib/node_modules_global --global
-sudo wget -O /etc/profile.d/set_nvim_env_variables.sh https://github.com/vertelab/vertel-neovim-config/raw/refs/heads/main/set_nvim_env_variables.sh
-. /etc/profile.d/set_nvim_env_variables.sh
+echo -e '\nexport PATH="/usr/local/lib/node_modules_global/bin:$PATH"\nexport PATH="$HOME/.cargo/bin:$PATH"' >> ~/.bashrc
+. ~/.bashrc
