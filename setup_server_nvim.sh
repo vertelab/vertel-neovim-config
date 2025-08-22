@@ -3,10 +3,10 @@
 USER_LOCATION=$(pwd)
 NVIM=/etc/xdg/nvim
 
-# snap installing neovim 
+# Snap installing neovim 
 sudo snap install nvim --classic
 
-# installing luarocks dependencys and more
+# Installing luarocks dependencys and more
 sudo apt-get update
 sudo apt-get install -y lua5.1 liblua5.1-dev unzip npm ripgrep tree-sitter-cli mercurial
 
@@ -19,7 +19,7 @@ sudo apt-get install -y nodejs
 # Installing python dependencys
 sudo pip install mcp-hub
 
-# seting up and installing luarocks
+# Seting up and installing luarocks
 wget -O /tmp/luarocks.tar.gz https://luarocks.org/releases/luarocks-3.12.2.tar.gz
 tar zxpf luarocks.tar.gz
 cd /tmp/luarocks-3.12.2/
@@ -32,7 +32,7 @@ sudo groupadd odoo
 # Add your user to the group (and other users as needed)
 sudo usermod -a -G odoo $USER
 
-# setting up global neovim config
+# Setting up global neovim config
 sudo mkdir $NVIM
 sudo chown root:odoo $NVIM
 sudo chmod g+rwx $NVIM
