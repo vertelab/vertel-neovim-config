@@ -5,12 +5,6 @@ NVIM=$HOME/.config/nvim
 # Snap installing neovim 
 sudo snap install nvim --classic
 
-# Fix latest version of nodejs for mcphub
-sudo DEBIAN_FRONTEND=noninteractive apt-get remove -y nodejs libnode-dev nodejs-doc
-sudo apt update
-curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
-sudo DEBIAN_FRONTEND=noninteractive apt-get install -y nodejs
-
 # Installing luarocks dependencys and more
 sudo apt update
 sudo DEBIAN_FRONTEND=noninteractive apt-get install -y \
