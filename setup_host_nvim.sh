@@ -54,5 +54,5 @@ sudo mkdir -p /usr/local/lib/node_modules_global
 # Change the ownership of the directory to the new group
 sudo chown -R $USER:$USER /usr/local/lib/node_modules_global
 sudo npm config set prefix /usr/local/lib/node_modules_global --global
-echo -e '\nexport PATH="/usr/local/lib/node_modules_global/bin:$PATH"\nexport PATH="$HOME/.cargo/bin:$PATH"' >> ~/.bashrc
+echo -e '\nexport PATH="/usr/local/lib/node_modules_global/bin:$PATH"\nexport PATH="$HOME/.cargo/bin:$PATH"\nexport NVIM="$HOME/.config/nvim"' >> ~/.bashrc
 . ~/.bashrc
