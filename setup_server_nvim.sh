@@ -30,6 +30,7 @@ source $HOME/.cargo/env
 cargo install tree-sitter-cli
 
 # Seting up and installing luarocks
+cd /tmp
 wget -O /tmp/luarocks.tar.gz https://luarocks.org/releases/luarocks-3.12.2.tar.gz
 tar zxpf luarocks.tar.gz
 cd /tmp/luarocks-3.12.2/
