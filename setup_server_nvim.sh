@@ -43,14 +43,14 @@ sudo groupadd odoo
 sudo usermod -a -G odoo $USER
 
 # Setting up global neovim config
-sudo mkdir $NVIM
-sudo chown root:odoo $NVIM
-sudo chmod g+rwx $NVIM
-mkdir $NVIM/mcphub
-mkdir $NVIM/lua
-mkdir $NVIM/lua/config
-mkdir $NVIM/lua/plugins
-mkdir $NVIM/lua/themes
+sudo mkdir $NVIM -p
+sudo mkdir $NVIM/mcphub
+sudo mkdir $NVIM/lua
+sudo mkdir $NVIM/lua/config
+sudo mkdir $NVIM/lua/plugins
+sudo mkdir $NVIM/lua/themes
+sudo chown root:odoo $NVIM -R
+sudo chmod g+rwx $NVIM -R
 
 # get nvim files
 wget -O $NVIM/init.lua https://github.com/vertelab/vertel-neovim-config/raw/refs/heads/main/nvim/init.lua
