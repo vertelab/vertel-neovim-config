@@ -7,7 +7,11 @@ NVIM=/etc/xdg/nvim
 sudo snap install nvim --classic
 
 # installing luarocks dependencys and more
-sudo apt-get install lua5.1 liblua5.1-dev unzip npm
+sudo apt-get update
+sudo apt-get install lua5.1 liblua5.1-dev unzip npm ripgrep tree-sitter mercurial
+
+# Installing python dependencys
+sudo pip install mcp-hub
 
 # seting up and installing luarocks
 wget -O /tmp/luarocks.tar.gz https://luarocks.org/releases/luarocks-3.12.2.tar.gz
