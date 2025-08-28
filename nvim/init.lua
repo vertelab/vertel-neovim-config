@@ -14,7 +14,7 @@ vim.opt.relativenumber = true
 
 vim.opt.smartindent = true
 
-vim.opt.clipboard = "unnamedplus"
+vim.opt.clipboard:append('unnamedplus')
 
 vim.keymap.set("n", "<leader>e", ":Lexplore<CR>", { noremap = true, silent = true })
 
