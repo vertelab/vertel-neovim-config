@@ -1,6 +1,7 @@
 #!/bin/bash
 
 NVIM=$HOME/.config/nvim
+OLDLOC=`pwd`
 
 # Snap installing neovim 
 sudo snap install nvim --classic
@@ -10,7 +11,7 @@ sudo apt update
 sudo DEBIAN_FRONTEND=noninteractive apt-get install -y \
     -o Dpkg::Options::="--force-confdef" \
     -o Dpkg::Options::="--force-confold" \
-    lua5.1 liblua5.1-dev liblua5.1-0-dev unzip ripgrep mercurial build-essential wl-clipboard
+    lua5.4 liblua5.4-dev unzip ripgrep mercurial build-essential wl-clipboard npm
 
 # setup tree-sitter
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
@@ -56,3 +57,5 @@ sudo chown -R $USER:$USER /usr/local/lib/node_modules_global
 sudo npm config set prefix /usr/local/lib/node_modules_global --global
 echo -e '\nexport PATH="/usr/local/lib/node_modules_global/bin:$PATH"\nexport PATH="$HOME/.cargo/bin:$PATH"\nexport NVIM="$HOME/.config/nvim"' >> ~/.bashrc
 . ~/.bashrc
+
+cd $OLDLOC
