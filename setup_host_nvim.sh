@@ -11,7 +11,7 @@ sudo apt update
 sudo DEBIAN_FRONTEND=noninteractive apt-get install -y \
     -o Dpkg::Options::="--force-confdef" \
     -o Dpkg::Options::="--force-confold" \
-    lua5.4 liblua5.4-dev unzip ripgrep mercurial build-essential wl-clipboard npm
+    lua5.1 liblua5.1-dev unzip ripgrep mercurial build-essential wl-clipboard npm
 
 # setup tree-sitter
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
